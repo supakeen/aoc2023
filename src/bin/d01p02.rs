@@ -48,7 +48,7 @@ fn parse(line: &str) -> (u32, u32) {
 
         let c = line.chars().nth(i).unwrap();
 
-        if ('0'..='9').contains(&c) {
+        if c.is_ascii_digit() {
             numbers.push(c.to_digit(10).unwrap());
         }
     }

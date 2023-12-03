@@ -25,7 +25,7 @@ where
 fn parse(line: &str) -> (u32, u32) {
     let numbers: Vec<u32> = line
         .chars()
-        .filter(|c| ('0'..='9').contains(c))
+        .filter(|c| c.is_ascii_digit())
         .map(|c| c.to_digit(10).unwrap())
         .collect();
 
