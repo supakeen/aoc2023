@@ -7,7 +7,7 @@ fn main() -> io::Result<()> {
 
     let sum: u32 = as_numbers(str::from_utf8(&b).unwrap(), parse)
         .into_iter()
-        .map(|p| format!("{}{}", p.0, p.1).parse::<u32>().unwrap())
+        .map(|p| p.0 * 10 + p.1)
         .sum();
 
     println!("{}", sum);
